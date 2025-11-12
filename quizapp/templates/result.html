@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block title %}Quiz Results{% endblock %}
+{% block content %}
+<div class="bg-white p-6 rounded shadow text-center">
+  <h2 class="text-2xl font-bold mb-2">Quiz Result: {{ quiz.title }}</h2>
+  <p class="mb-4">{{ user_name }}, you scored <span class="font-semibold">{{ score }}</span> out of {{ total }}</p>
+  <a href="{% url 'quiz_list' %}" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">Try Another Quiz</a>
+</div>
+{% endblock %}
